@@ -9,7 +9,7 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selenide.$;
 
-public class GoogleTest {
+public class YandexTest {
 
     static {
         ChromeOptions options = new ChromeOptions();
@@ -20,8 +20,8 @@ public class GoogleTest {
     }
 
     @Test
-    void googleTest() {
-        Selenide.open("https://google.com");
+    void yandexTest() {
+        Selenide.open("https://yandex.ru");
         $("[name=q]").setValue("selenide").pressEnter();
         $("[id=search]").shouldHave(text("https://selenide.org"));
     }
