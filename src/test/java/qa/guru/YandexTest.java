@@ -21,7 +21,7 @@ public class YandexTest {
 
     @Test
     void yandexTest() {
-        Selenide.open("https://yandex.ru");
+        Selenide.open("https://ya.ru");
         $("[name=q]").setValue("selenide").pressEnter();
         $("[id=search]").shouldHave(text("https://selenide.org"));
     }
